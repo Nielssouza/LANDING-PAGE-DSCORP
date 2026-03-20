@@ -12,18 +12,20 @@ const brandLogo = '/DS-Corp.svg'
 
 const heroTags = [
   'Business Intelligence',
+  'Engenharia de Software',
   'Contabilidade',
   'Controladoria',
 ]
 
 const whoWeAreParagraphs = [
-  'Somos uma empresa especializada em soluções inteligentes baseada em dados, ajudando negócios a coletar, organizar, analisar e transformar informações em estratégias de crescimento.',
+  'Somos uma empresa especializada em soluções inteligentes baseada em dados, ajudando negócios a coletar, organizar, analisar e transformar informações em estratégias de crescimento, automações e produtos digitais mais eficientes.',
   'Na DS Corp, a tecnologia é nossa base, mas os dados são o nosso combustível.',
 ]
 
 const whoHighlights = [
   'Leitura contábil com visão gerencial',
   'Estratégia baseada em dados confiáveis',
+  'Stack de engenharia para sistemas e integrações',
   'Estrutura para decisões rápidas e seguras',
 ]
 
@@ -53,6 +55,7 @@ const integrationBulletPoints = [
 const consultingBenefits = [
   'Automatização de relatórios contábeis e gerenciais com atualizações em tempo real',
   'Análise de performance financeira cruzando receitas, despesas, tributos e KPIs operacionais',
+  'Desenvolvimento de integrações, APIs e fluxos que conectam sistemas financeiros e operacionais',
   'Planejamento e orçamento mais precisos com base em dados históricos e tendências de mercado',
   'Conformidade e auditoria facilitadas com rastreabilidade completa das informações',
   'Capacidade de resposta rápida a variações de mercado pela integração entre dados financeiros e operacionais',
@@ -94,11 +97,21 @@ const comparisonCards = [
 
 const toolCards = [
   {
+    name: 'Microsoft Fabric',
+    logo: '/microsoft-fabric.svg',
+    logoAlt: 'Logo do Microsoft Fabric',
+    logoFrameClassName: 'tool-card__logo-frame--fabric',
+    logoClassName: 'tool-card__logo--fabric',
     title: 'O que é o Microsoft Fabric?',
     text:
       'O Microsoft Fabric é uma plataforma unificada de análise de dados desenvolvida pela Microsoft, lançada oficialmente em 2023. Seu objetivo é integrar diversas ferramentas de engenharia de dados, ciência de dados, business intelligence e armazenamento em um único ambiente.',
   },
   {
+    name: 'Databricks',
+    logo: '/databricks-logo.png',
+    logoAlt: 'Logo do Databricks',
+    logoFrameClassName: 'tool-card__logo-frame--databricks',
+    logoClassName: 'tool-card__logo--databricks',
     title: 'O que é o Databricks?',
     text:
       'O Databricks é uma plataforma unificada de análise de dados, engenharia de dados, ciência de dados e machine learning, baseada no Apache Spark. Ela foi criada para facilitar o processamento de grandes volumes de dados de forma rápida, escalável e colaborativa.',
@@ -177,7 +190,7 @@ function App() {
                 </span>
               </a>
 
-              <p className="eyebrow">Business Intelligence com visão contábil e gerencial</p>
+              <p className="eyebrow">Business Intelligence, engenharia de software e visão contábil</p>
 
               <h1>
                 <span>Tecnologia é a nossa base,</span>
@@ -186,8 +199,8 @@ function App() {
               </h1>
 
               <p className="hero-lead">
-                Estruturamos informação, leitura financeira e inteligência operacional para
-                transformar números dispersos em direção estratégica.
+                Estruturamos informação, leitura financeira, integrações e inteligência
+                operacional para transformar números dispersos em direção estratégica.
               </p>
 
               <div className="tag-row" aria-label="Áreas de atuação">
@@ -227,8 +240,9 @@ function App() {
             <p className="eyebrow">Quem somos</p>
             <h2>Dados, gestão e execução no mesmo plano.</h2>
             <p>
-              A DS Corp une inteligência analítica, contabilidade e controladoria para
-              criar uma base de decisão mais confiável, clara e útil para o negócio.
+              A DS Corp une inteligência analítica, engenharia de software, contabilidade e
+              controladoria para criar uma base de decisão mais confiável, clara e útil para
+              o negócio.
             </p>
           </div>
 
@@ -345,6 +359,18 @@ function App() {
           <div className="tool-grid">
             {toolCards.map((card) => (
               <article className="panel tool-card" key={card.title}>
+                <div className="tool-card__brand">
+                  <div className={`tool-card__logo-frame ${card.logoFrameClassName}`}>
+                    <img
+                      className={`tool-card__logo ${card.logoClassName}`}
+                      src={card.logo}
+                      alt={card.logoAlt}
+                    />
+                  </div>
+
+                  <span className="tool-card__name">{card.name}</span>
+                </div>
+
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
               </article>
@@ -354,19 +380,21 @@ function App() {
           <article className="panel consulting-card">
             <p className="eyebrow">Consultoria integrada</p>
             <h3>
-              Por que unir Business Intelligence, contabilidade e controladoria?
+              Por que unir Business Intelligence, engenharia de software, contabilidade e
+              controladoria?
             </h3>
 
             <p>
               Em um cenário cada vez mais competitivo e orientado por dados, tomar decisões
               com base em suposições ou planilhas fragmentadas custa caro. Por isso, unir
-              Databricks, Microsoft Fabric, contabilidade e controladoria cria uma vantagem
-              estratégica real para a gestão.
+              Databricks, Microsoft Fabric, engenharia de software, contabilidade e
+              controladoria cria uma vantagem estratégica real para a gestão.
             </p>
 
             <p>
               Essa abordagem transforma dados brutos em informação acionável, conecta os
-              números à realidade econômica da empresa e aumenta a qualidade da execução.
+              números à realidade econômica da empresa e sustenta produtos, integrações e
+              operações com mais qualidade de execução.
             </p>
 
             <div className="benefit-grid">
