@@ -9,7 +9,36 @@ const port = Number(process.env.PORT) || 5000
 
 const app = express()
 
-app.use(express.static(distPath))
+app.disable('x-powered-by')
+
+app.use((_, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    [
+      "default-src 'self'",
+      "base-uri 'self'",
+      "frame-ancestors 'none'",
+      "object-src 'none'",
+      "script-src 'self'",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com data:",
+      "img-src 'self' data: https:",
+      "connect-src 'self'",
+      "form-action 'self'",
+    ].join('; '),
+  )
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
+  res.setHeader('X-Content-Type-Options', 'nosniff')
+  res.setHeader('X-Frame-Options', 'DENY')
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
+  next()
+})
+
+app.use(
+  express.static(distPath, {
+    index: false,
+  }),
+)
 
 // SPA fallback para Heroku e acesso direto a rotas futuras.
 app.use((_req, res) => {

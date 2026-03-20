@@ -294,7 +294,7 @@ function App() {
               className="site-nav__external"
               href="https://www.portfolio.dscorp.top/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Portfólio Power BI
             </a>
@@ -541,16 +541,16 @@ function App() {
                 className="contact-action--social"
                 href="https://wa.me/556298533383"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <WhatsAppIcon />
                 <span>WhatsApp</span>
               </a>
               <a
                 className="contact-action--social"
-                href="https://www.linkedin.com/company/108253701/admin/dashboard/"
+                href="https://www.linkedin.com/company/108253701/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <LinkedInIcon />
                 <span>LinkedIn</span>
@@ -559,7 +559,7 @@ function App() {
                 className="contact-action--social"
                 href="https://www.instagram.com/dscorp_/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <InstagramIcon />
                 <span>Instagram</span>
