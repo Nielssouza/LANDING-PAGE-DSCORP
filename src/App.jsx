@@ -11,10 +11,10 @@ import fundamentalsImageThree from './assets/canva/fundamentos-3.jpg'
 const brandLogo = '/DS-Corp.svg'
 
 const heroTags = [
-  'Business Intelligence',
   'Engenharia de Software',
-  'Contabilidade',
-  'Controladoria',
+  'Business Intelligence',
+  'Automação de Processos',
+  'Integração de Sistemas',
 ]
 
 const whoWeAreParagraphs = [
@@ -23,42 +23,49 @@ const whoWeAreParagraphs = [
 ]
 
 const whoHighlights = [
-  'Leitura contábil com visão gerencial',
-  'Estratégia baseada em dados confiáveis',
-  'Stack de engenharia para sistemas e integrações',
+  'Engenharia para sistemas, APIs e integração de sistemas',
+  'Automação de processos para ganho de escala',
+  'Business Intelligence para leitura estratégica',
   'Estrutura para decisões rápidas e seguras',
 ]
 
 const fundamentalsText =
-  'Em um cenário cada vez mais orientado por dados e resultados, as áreas de Contabilidade e Controladoria se destacam como pilares fundamentais da gestão empresarial. Embora tenham funções distintas, elas são complementares e, quando atuam de forma integrada, potencializam a qualidade das informações e fortalecem a tomada de decisões estratégicas.'
+  'A DS Corp combina engenharia de software, automação de processos, integração de sistemas, dados e inteligência gerencial para construir soluções digitais, fluxos operacionais e camadas de leitura de negócio. O objetivo não é apenas organizar informação, mas criar estrutura técnica para execução, escala e decisão.'
 
-const accountingBulletPoints = [
-  'Balanço Patrimonial',
-  'Demonstração do Resultado do Exercício (DRE)',
-  'Demonstração de Fluxo de Caixa (DFC)',
+const softwareEngineeringBulletPoints = [
+  'Sistemas web e internos orientados ao negócio',
+  'Integração de sistemas entre plataformas, ERPs e ferramentas operacionais',
+  'APIs, automações e fluxos para reduzir retrabalho',
 ]
 
-const controllingBulletPoints = [
-  'Planejamento estratégico e orçamentário',
-  'Análise de indicadores de desempenho',
-  'Apoio à tomada de decisões gerenciais',
-  'Avaliação de rentabilidade por produto, cliente ou unidade de negócio',
+const dataAndBiBulletPoints = [
+  'Dashboards gerenciais e operacionais',
+  'Modelagem de dados para leitura confiável',
+  'Indicadores para performance, margem e eficiência',
+]
+
+const processAutomationBulletPoints = [
+  'Automação de tarefas operacionais e administrativas',
+  'Fluxos de aprovação, alertas e gatilhos entre sistemas',
+  'Padronização de rotinas para reduzir gargalos e retrabalho',
+  'Integração de etapas críticas com mais velocidade e rastreabilidade',
 ]
 
 const integrationBulletPoints = [
-  'Promovem transparência e confiabilidade das informações.',
-  'Facilitam a análise de desempenho e a identificação de desvios.',
-  'Conectam o passado, o presente e o futuro do negócio.',
-  'Oferecem uma visão integrada e estratégica da operação.',
+  'Transformam processos manuais em fluxos digitais mais confiáveis.',
+  'Conectam sistemas, dados e operação em uma mesma arquitetura.',
+  'Facilitam a leitura de desempenho e a identificação de gargalos.',
+  'Criam base técnica para crescer com mais velocidade e controle.',
 ]
 
 const consultingBenefits = [
-  'Automatização de relatórios contábeis e gerenciais com atualizações em tempo real',
+  'Automação de processos operacionais e administrativos para reduzir gargalos e retrabalho',
+  'Automatização de relatórios operacionais e gerenciais com atualizações em tempo real',
   'Análise de performance financeira cruzando receitas, despesas, tributos e KPIs operacionais',
-  'Desenvolvimento de integrações, APIs e fluxos que conectam sistemas financeiros e operacionais',
+  'Integração de sistemas, APIs e fluxos que conectam ambientes financeiros, comerciais e operacionais',
+  'Orquestração de etapas, aprovações e notificações entre times e plataformas',
   'Planejamento e orçamento mais precisos com base em dados históricos e tendências de mercado',
-  'Conformidade e auditoria facilitadas com rastreabilidade completa das informações',
-  'Capacidade de resposta rápida a variações de mercado pela integração entre dados financeiros e operacionais',
+  'Capacidade de resposta mais rápida pela integração entre processos, dados e operação',
 ]
 
 const fundamentalsGallery = [
@@ -78,20 +85,28 @@ const fundamentalsGallery = [
 
 const comparisonCards = [
   {
-    title: 'O Papel da Contabilidade',
+    title: 'Engenharia de Software',
     intro:
-      'A Contabilidade é a ciência que registra, classifica e interpreta os fatos econômicos e financeiros de uma empresa. Seu foco principal é garantir a fidedignidade das demonstrações contábeis, como:',
-    items: accountingBulletPoints,
+      'A engenharia de software organiza a operação digital da empresa. Ela transforma necessidades do negócio em sistemas, integrações e automações que dão velocidade, padronização e escala para a execução.',
+    items: softwareEngineeringBulletPoints,
     closing:
-      'Essas informações são essenciais para avaliar o patrimônio, o desempenho econômico e a situação financeira da organização, servindo como base legal, fiscal e gerencial.',
+      'Quando bem aplicada, reduz ruído operacional, melhora a experiência interna e conecta tecnologia diretamente ao resultado.',
   },
   {
-    title: 'O Papel da Controladoria',
+    title: 'Dados e Business Intelligence',
     intro:
-      'A Controladoria atua de forma mais estratégica. Seu objetivo é coletar, analisar e interpretar dados contábeis, financeiros e operacionais, transformando essas informações em insumos para planejamento, controle e decisão.',
-    items: controllingBulletPoints,
+      'Business Intelligence transforma dados dispersos em leitura acionável. O foco é dar clareza para operação, gestão e liderança por meio de indicadores confiáveis e contexto analítico.',
+    items: dataAndBiBulletPoints,
     closing:
-      'Enquanto a contabilidade foca em registrar o passado com precisão, a controladoria utiliza esses registros para projetar o futuro com inteligência.',
+      'Mais do que visualizar números, BI bem estruturado ajuda a orientar prioridades, corrigir desvios e acelerar a tomada de decisão.',
+  },
+  {
+    title: 'Automação de Processos',
+    intro:
+      'Automação de processos elimina etapas manuais desnecessárias e transforma rotinas críticas em fluxos digitais mais previsíveis. O foco é ganhar velocidade, reduzir falhas e aumentar a capacidade operacional.',
+    items: processAutomationBulletPoints,
+    closing:
+      'Quando conectada à engenharia e aos dados, a automação deixa de ser tarefa isolada e passa a ser mecanismo de escala do negócio.',
   },
 ]
 
@@ -161,6 +176,59 @@ function AnalyticsIcon() {
   )
 }
 
+function LinkedInIcon() {
+  return (
+    <svg
+      className="contact-action__icon"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M6.94 8.5H3.56V20H6.94V8.5ZM5.25 3C4.17 3 3.31 3.88 3.31 4.96C3.31 6.04 4.17 6.91 5.25 6.91C6.33 6.91 7.19 6.04 7.19 4.96C7.19 3.88 6.33 3 5.25 3ZM20.69 13.09C20.69 10.05 19.04 8.18 15.86 8.18C14.33 8.18 13.65 9.02 13.27 9.62V8.5H10.03C10.07 9.24 10.03 20 10.03 20H13.27V13.58C13.27 13.24 13.29 12.9 13.39 12.66C13.65 11.98 14.24 11.28 15.24 11.28C16.55 11.28 17.08 12.27 17.08 13.73V20H20.31V13.35C20.31 13.26 20.31 13.17 20.31 13.09H20.69Z" />
+    </svg>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg
+      className="contact-action__icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.25" cy="6.75" r="1.25" fill="currentColor" />
+    </svg>
+  )
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg
+      className="contact-action__icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M12 4C7.58 4 4 7.44 4 11.69C4 13.21 4.46 14.64 5.24 15.85L4.5 20L8.8 19.3C9.97 19.96 10.95 20 12 20C16.42 20 20 16.56 20 12.31C20 8.06 16.42 4 12 4Z"
+        stroke="currentColor"
+        strokeWidth="1.9"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.34 9.4C9.52 9 9.72 8.98 9.93 8.99C10.1 8.99 10.3 8.99 10.48 9C10.63 9 10.83 9.06 10.95 9.33C11.09 9.65 11.42 10.44 11.46 10.51C11.51 10.59 11.54 10.69 11.47 10.8C11.4 10.91 11.36 10.98 11.26 11.08C11.15 11.18 11.03 11.31 10.94 11.39C10.84 11.48 10.74 11.57 10.83 11.73C10.91 11.88 11.22 12.38 11.67 12.78C12.26 13.31 12.75 13.48 12.93 13.57C13.1 13.65 13.2 13.64 13.3 13.53C13.41 13.41 13.73 13.04 13.86 12.85C13.99 12.67 14.12 12.7 14.28 12.76C14.45 12.81 15.35 13.24 15.53 13.33C15.7 13.42 15.83 13.46 15.87 13.54C15.92 13.63 15.92 14.03 15.75 14.43C15.58 14.82 14.74 15.18 14.38 15.2C14.03 15.23 13.58 15.31 11.92 14.68C10.23 14.05 9.11 12.36 9.02 12.23C8.93 12.11 8.32 11.33 8.32 10.53C8.32 9.72 8.76 9.35 8.93 9.17C9.1 9 9.21 8.96 9.34 9.4Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
 function App() {
   return (
     <main className="page-shell">
@@ -168,8 +236,8 @@ function App() {
         <div className="content-shell site-header__inner">
           <nav className="site-nav" aria-label="Navegação principal">
             <a href="#quem-somos">Quem somos</a>
-            <a href="#fundamentos">Fundamentos</a>
-            <a href="#ferramentas">Ferramentas</a>
+            <a href="#fundamentos">Soluções</a>
+            <a href="#abordagem">Abordagem</a>
             <a href="#contato">Contato</a>
           </nav>
         </div>
@@ -190,7 +258,7 @@ function App() {
                 </span>
               </a>
 
-              <p className="eyebrow">Business Intelligence, engenharia de software e visão contábil</p>
+              <p className="eyebrow">Engenharia de software, dados e gestão conectados</p>
 
               <h1>
                 <span>Tecnologia é a nossa base,</span>
@@ -199,8 +267,8 @@ function App() {
               </h1>
 
               <p className="hero-lead">
-                Estruturamos informação, leitura financeira, integrações e inteligência
-                operacional para transformar números dispersos em direção estratégica.
+                Construímos sistemas, integração de sistemas, automações de processos e
+                leitura gerencial para transformar tecnologia em direção estratégica.
               </p>
 
               <div className="tag-row" aria-label="Áreas de atuação">
@@ -240,9 +308,9 @@ function App() {
             <p className="eyebrow">Quem somos</p>
             <h2>Dados, gestão e execução no mesmo plano.</h2>
             <p>
-              A DS Corp une inteligência analítica, engenharia de software, contabilidade e
-              controladoria para criar uma base de decisão mais confiável, clara e útil para
-              o negócio.
+              A DS Corp une inteligência analítica, engenharia de software, integração de
+              sistemas, automação de processos e gestão para criar uma base de decisão mais
+              confiável, clara e útil para o negócio.
             </p>
           </div>
 
@@ -269,8 +337,8 @@ function App() {
       <section className="section section--fundamentals" id="fundamentos">
         <div className="content-shell">
           <div className="section-intro section-intro--center">
-            <p className="eyebrow">Fundamentos</p>
-            <h2>Contabilidade e controladoria atuando em conjunto.</h2>
+            <p className="eyebrow">Soluções</p>
+            <h2>Software, dados e gestão atuando em conjunto.</h2>
             <p>{fundamentalsText}</p>
           </div>
 
@@ -288,7 +356,7 @@ function App() {
         <div className="content-shell">
           <div className="section-intro section-intro--center">
             <p className="eyebrow">Pilares</p>
-            <h2>Do registro preciso à leitura estratégica.</h2>
+            <h2>Da arquitetura técnica à decisão de negócio.</h2>
           </div>
 
           <div className="comparison-grid">
@@ -319,11 +387,12 @@ function App() {
           <div className="integration-layout">
             <article className="integration-lead panel panel--dark">
               <p className="eyebrow eyebrow--inverse">Sinergia</p>
-              <h2>Como se complementam?</h2>
+              <h2>Como isso se conecta?</h2>
               <p>
-                A Contabilidade gera os dados, e a Controladoria transforma esses dados em
-                valor. Juntas, criam visibilidade real sobre a operação e sustentam decisões
-                mais rápidas, embasadas e inteligentes.
+                Engenharia de software organiza a execução, integração de sistemas conecta a
+                operação, automação de processos reduz atrito, e dados trazem visibilidade
+                para a decisão. Quando essas frentes atuam em conjunto, a empresa ganha
+                clareza, velocidade e consistência operacional.
               </p>
             </article>
 
@@ -339,61 +408,39 @@ function App() {
 
           <article className="panel panel--accent integration-summary">
             <p>
-              Esse trabalho conjunto é essencial na construção de dashboards gerenciais,
-              relatórios de performance, análises de margem de contribuição e cenários de
-              orçamento versus realizado. A integração entre Contabilidade e Controladoria
-              fortalece a gestão empresarial e torna a tomada de decisão mais embasada, ágil
-              e estratégica.
+              Esse trabalho conjunto é essencial para estruturar produtos internos,
+              integrações entre sistemas, dashboards gerenciais, automações e rotinas de
+              acompanhamento econômico. O resultado é uma operação mais conectada, escalável
+              e orientada por decisão.
             </p>
           </article>
         </div>
       </section>
 
-      <section className="section section--tools" id="ferramentas">
+      <section className="section section--tools" id="abordagem">
         <div className="content-shell">
           <div className="section-intro section-intro--center">
-            <p className="eyebrow">Ferramentas</p>
-            <h2>Tecnologia aplicada com contexto financeiro.</h2>
-          </div>
-
-          <div className="tool-grid">
-            {toolCards.map((card) => (
-              <article className="panel tool-card" key={card.title}>
-                <div className="tool-card__brand">
-                  <div className={`tool-card__logo-frame ${card.logoFrameClassName}`}>
-                    <img
-                      className={`tool-card__logo ${card.logoClassName}`}
-                      src={card.logo}
-                      alt={card.logoAlt}
-                    />
-                  </div>
-
-                  <span className="tool-card__name">{card.name}</span>
-                </div>
-
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-              </article>
-            ))}
+            <p className="eyebrow">Abordagem</p>
+            <h2>Tecnologia aplicada a software, dados e operação.</h2>
           </div>
 
           <article className="panel consulting-card">
             <p className="eyebrow">Consultoria integrada</p>
             <h3>
-              Por que unir Business Intelligence, engenharia de software, contabilidade e
-              controladoria?
+              Por que unir Business Intelligence, engenharia de software, integração de
+              sistemas e automação de processos?
             </h3>
 
             <p>
               Em um cenário cada vez mais competitivo e orientado por dados, tomar decisões
               com base em suposições ou planilhas fragmentadas custa caro. Por isso, unir
-              Databricks, Microsoft Fabric, engenharia de software, contabilidade e
-              controladoria cria uma vantagem estratégica real para a gestão.
+              Databricks, Microsoft Fabric, engenharia de software, integração de sistemas e
+              automação de processos cria uma vantagem estratégica real para a gestão.
             </p>
 
             <p>
               Essa abordagem transforma dados brutos em informação acionável, conecta os
-              números à realidade econômica da empresa e sustenta produtos, integrações e
+              números à realidade operacional da empresa e sustenta produtos, integrações e
               operações com mais qualidade de execução.
             </p>
 
@@ -413,18 +460,51 @@ function App() {
         <div className="content-shell">
           <div className="contact-panel">
             <div className="contact-copy">
-              <p className="eyebrow eyebrow--inverse">Entre em contato</p>
-              <h2>DSCORP_</h2>
+              <div className="contact-brand" aria-hidden="true">
+                <span className="contact-brand__mark">
+                  <img className="contact-brand__logo" src={brandLogo} alt="" />
+                </span>
+              </div>
+              <p className="eyebrow eyebrow--inverse">Entre em contato com a</p>
+              <h2>DSCORP</h2>
               <p className="contact-line">62 9853-3383</p>
               <p className="contact-line">CONTATO@DSCORP.TOP</p>
-              <p className="contact-line">CNPJ: 36.406.295/0001-48 DANIEL DE SOUZA COSTA - ME</p>
+              <p className="contact-line">
+                CNPJ: 36.406.295/0001-48
+                <br />
+                DANIEL DE SOUZA COSTA - ME
+              </p>
             </div>
 
             <div className="contact-actions" aria-label="Ações de contato">
-              <a href="tel:+556298533383">Ligar agora</a>
               <a href="mailto:contato@dscorp.top">Enviar e-mail</a>
-              <span>LINKEDIN</span>
-              <span>PORTFOLIO</span>
+              <a
+                className="contact-action--social"
+                href="https://wa.me/556298533383"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <WhatsAppIcon />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                className="contact-action--social"
+                href="https://www.linkedin.com/company/108253701/admin/dashboard/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LinkedInIcon />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                className="contact-action--social"
+                href="https://www.instagram.com/dscorp_/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <InstagramIcon />
+                <span>Instagram</span>
+              </a>
             </div>
           </div>
         </div>

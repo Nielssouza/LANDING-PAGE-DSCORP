@@ -666,7 +666,7 @@
 
 .fundamentals-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.9fr 1.05fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -675,12 +675,12 @@
 }
 
 .fundamentals-card--2 {
-  transform: translateY(34px);
+  transform: none;
 }
 
 .comparison-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -714,7 +714,7 @@
 }
 
 .comparison-card h3 {
-  font-size: clamp(2.3rem, 3.4vw, 3.6rem);
+  font-size: clamp(2rem, 2.6vw, 3rem);
   line-height: 0.92;
 }
 
@@ -823,67 +823,6 @@
   padding: 32px;
 }
 
-.tool-card__brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 22px;
-}
-
-.tool-card__logo-frame {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 138px;
-  min-height: 74px;
-  padding: 14px 18px;
-  overflow: hidden;
-  border-radius: 22px;
-  border: 1px solid rgba(10, 10, 10, 0.08);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 243, 236, 0.9)),
-    rgba(255, 255, 255, 0.84);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.84),
-    0 16px 30px rgba(18, 14, 10, 0.08);
-}
-
-.tool-card__logo {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.tool-card__logo--fabric {
-  width: 54px;
-}
-
-.tool-card__logo-frame--databricks {
-  min-width: 92px;
-  width: 92px;
-  justify-content: flex-start;
-  padding-inline: 18px;
-}
-
-.tool-card__logo--databricks {
-  width: 48px;
-  height: 24px;
-  object-fit: none;
-  object-position: left center;
-  transform: scale(1.7);
-  transform-origin: left center;
-  filter: saturate(1.2) contrast(1.08);
-}
-
-.tool-card__name {
-  font-family: 'Montserrat', 'Manrope', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(10, 10, 10, 0.54);
-}
-
 .tool-card h3,
 .consulting-card h3 {
   font-size: clamp(2.3rem, 3.4vw, 3.8rem);
@@ -950,6 +889,31 @@
   color: #ffffff;
 }
 
+.contact-brand {
+  margin-bottom: 18px;
+}
+
+.contact-brand__mark {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at top, rgba(185, 138, 83, 0.2), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 18px 34px rgba(0, 0, 0, 0.22);
+}
+
+.contact-brand__logo {
+  width: 72px;
+  filter: brightness(0) invert(1);
+}
+
 .contact-copy h2 {
   margin-top: 12px;
   font-size: clamp(3rem, 5vw, 4.8rem);
@@ -972,8 +936,8 @@
   max-width: 360px;
 }
 
-.contact-actions a,
-.contact-actions span {
+.contact-actions > a,
+.contact-actions > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -994,10 +958,20 @@
     border-color 180ms ease;
 }
 
-.contact-actions a:hover {
+.contact-actions > a:hover {
   transform: translateY(-1px);
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(255, 255, 255, 0.22);
+}
+
+.contact-action--social {
+  gap: 10px;
+}
+
+.contact-action__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1100px) {
@@ -1084,10 +1058,6 @@
     justify-content: flex-start;
     max-width: none;
   }
-
-  .tool-card__brand {
-    flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 780px) {
@@ -1152,37 +1122,6 @@
   .consulting-card,
   .contact-panel {
     padding: 24px;
-  }
-
-  .tool-card__brand {
-    gap: 12px;
-    margin-bottom: 18px;
-  }
-
-  .tool-card__logo-frame {
-    min-width: 122px;
-    min-height: 64px;
-    padding: 12px 14px;
-    border-radius: 18px;
-  }
-
-  .tool-card__logo--fabric {
-    width: 46px;
-  }
-
-  .tool-card__logo-frame--databricks {
-    min-width: 84px;
-    width: 84px;
-  }
-
-  .tool-card__logo--databricks {
-    width: 42px;
-    height: 22px;
-  }
-
-  .tool-card__name {
-    font-size: 0.74rem;
-    letter-spacing: 0.18em;
   }
 
   .hero-copy h1 {
@@ -1267,8 +1206,8 @@
     font-size: clamp(2.6rem, 11vw, 4rem);
   }
 
-  .contact-actions a,
-  .contact-actions span {
+  .contact-actions > a,
+  .contact-actions > span {
     width: 100%;
   }
 }
