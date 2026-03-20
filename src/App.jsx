@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './App.css'
 import heroPortraitBg from './assets/canva/hero-portrait-bg.png'
 import heroTeamLeft from './assets/canva/hero-team-left.png'
@@ -230,6 +231,56 @@ function WhatsAppIcon() {
 }
 
 function App() {
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const revealSelector = [
+      '.section-intro',
+      '.panel',
+      '.fundamentals-card',
+      '.comparison-card',
+      '.integration-point',
+      '.who-visual',
+      '.contact-panel',
+    ].join(', ')
+
+    const elements = Array.from(document.querySelectorAll(revealSelector))
+
+    elements.forEach((element, index) => {
+      element.classList.add('reveal-on-scroll')
+      element.style.setProperty('--reveal-delay', `${Math.min(index * 55, 320)}ms`)
+    })
+
+    if (prefersReducedMotion) {
+      elements.forEach((element) => element.classList.add('is-visible'))
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return
+          }
+
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        })
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -12% 0px',
+      },
+    )
+
+    elements.forEach((element) => {
+      observer.observe(element)
+    })
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
   return (
     <main className="page-shell">
       <header className="site-header">
@@ -239,6 +290,14 @@ function App() {
             <a href="#fundamentos">Soluções</a>
             <a href="#abordagem">Abordagem</a>
             <a href="#contato">Contato</a>
+            <a
+              className="site-nav__external"
+              href="https://www.portfolio.dscorp.top/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Portfólio Power BI
+            </a>
           </nav>
         </div>
       </header>
